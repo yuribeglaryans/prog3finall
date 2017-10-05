@@ -11,13 +11,13 @@ function drawScatterChart() {
         success: function (jsonData) {
             var data = new google.visualization.DataTable();
             data.addColumn('date', 'date');
-            data.addColumn('number', 'views');
+            data.addColumn('number', 'csot');
 
 
             for (var i = 0; i < jsonData.length; i++) {
                 data.addRow([
                     new Date(jsonData[i].date),
-                    jsonData[i].cost,
+                        jsonData[i].cost,
 
                 ]);
 
