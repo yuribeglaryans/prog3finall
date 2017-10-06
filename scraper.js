@@ -71,7 +71,7 @@ function sc(page_number) {
         x.articles.push(...page.articles);
         console.log('x: ' + x.articles.length);
         console.log('url: ' + url);
-        if (page_number == 5) { //88
+        if (page_number == 15) { 
             jsonfile.writeFile(file, x, {
                 spaces: 2
             }, function(err) {
