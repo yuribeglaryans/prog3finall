@@ -55,7 +55,7 @@ function drawChart() {
             }
 
             var options = {
-                title: 'Works',
+                title: 'Salary distributio',
                 colors: ['orange'],
                 legend: { position: 'none' },
                 hAxis: { title: 'Work in salary' },
