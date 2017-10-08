@@ -82,13 +82,11 @@ function drawTable() {
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Work');
             data.addColumn('number', 'Salary in AMD');
-            data.addColumn('string', 'URL');
             data.addColumn('date', 'Date');
             for (var i = 0; i < jsonData.length; i++) {
                 data.addRow([
-                    jsonData[i].work,
+                    '<a href="'+jsonData[i].url+'">'+jsonData[i].work+'<a/>',                    
                     jsonData[i].cost,
-                    jsonData[i].url,
                     new Date(jsonData[i].date)
                 ]);
             }
