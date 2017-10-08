@@ -11,13 +11,13 @@ function drawScatterChart() {
         success: function (jsonData) {
             var data = new google.visualization.DataTable();
             data.addColumn('date', 'date');
-            data.addColumn('number', 'csot');
+            data.addColumn('number', 'Salary');
 
 
             for (var i = 0; i < jsonData.length; i++) {
                 data.addRow([
                     new Date(jsonData[i].date),
-                        jsonData[i].cost,
+                    jsonData[i].cost,
 
                 ]);
 
@@ -30,7 +30,7 @@ function drawScatterChart() {
                 width: '100%',
                 height: '100%',
                 hAxis: { title: 'Month' },
-                vAxis: { title: 'Salary', minValue: 0, maxValue: 2500},
+                vAxis: { title: 'Salary', minValue: 0, maxValue: 2500 },
             };
             //console.log(data.toJSON());
             // Instantiate and draw the chart.
@@ -81,13 +81,14 @@ function drawTable() {
         success: function (jsonData) {
             var data = new google.visualization.DataTable();
             data.addColumn('string', 'Work');
-            data.addColumn('number', 'Salary');
+            data.addColumn('number', 'Salary in AMD');
+            data.addColumn('string', 'URL');
             data.addColumn('date', 'Date');
-
             for (var i = 0; i < jsonData.length; i++) {
                 data.addRow([
                     jsonData[i].work,
                     jsonData[i].cost,
+                    jsonData[i].url,
                     new Date(jsonData[i].date)
                 ]);
             }
